@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 style="background-color: aqua; text-align: center;">TreasureHunt</h1>
+    <div id="boat">
+      <ul id="crew">
+        <li>Jack</li>
+        <li>Alice</li>
+        <li>Bob</li>
+        <li>Richard</li>
+      </ul>
+      <button onclick="directingTheRoute('Jack')">Asking Jack</button>
+      <button onclick="directingTheRoute('Alice')">Asking Alice</button>
+    </div>
+    <script>
+       function directingTheRoute(name){
+        if(name === "Jack"){
+            console.log(name + ' directing to Take north');
+        }
+        else{
+            console.log(name + ' directing to Take south');
+        }
+       } 
+    </script>
+  </body>
+</html>
