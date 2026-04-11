@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Restaurant Page</title>
+
+  <style>
+    body {
+      background-color: #f5f5dc; /* light cream background */
+      text-align: center; /* center all content */
+      font-family: Arial, sans-serif;
+    }
+
+    #title {
+      background-color: #ffcc99;
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    #desc {
+      margin-top: 20px;
+    }
+
+    button {
+      margin: 10px;
+      padding: 10px 15px;
+      border: none;
+      background-color: hsl(0, 0%, 5%);
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #ff704d;
+    }
+  </style>
+
+</head>
+<body>
+
+<h1 id="title">🍽️ Welcome to My Restaurant</h1>
+
+<p id="desc">Click a button to see menu details</p>
+
+<button onclick="changeTitle()">Change Title</button>
+<button onclick="changeStyle()">Change Style</button>
+<button onclick="changeContent()">Change Content</button>
+<button onclick="changeColorFont()">Change Color & Font</button>
+
+<script>
+
+function changeTitle() {
+  document.getElementById("title").innerText = "🍕 Delicious Food Corner";
+}
+
+function changeStyle() {
+  let title = document.getElementById("title");
+  title.style.backgroundColor = "lightgreen";
+}
+
+function changeContent() {
+  document.getElementById("desc").innerHTML = "Today's Special: 🍔 Burger, 🍝 Pasta, 🥗 Salad";
+}
+
+function changeColorFont() {
+  let para = document.getElementById("desc");
+  para.style.color = "blue";
+  para.style.fontSize = "22px";
+}
+
+</script>
+
+</body>
+</html>
