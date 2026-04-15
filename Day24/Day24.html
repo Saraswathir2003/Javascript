@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event Example</title>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      margin-top: 50px;
+    }
+    input, button {
+      padding: 10px;
+      margin: 20px;
+    }
+    #output {
+      font-size: 20px;
+      color: hsl(300, 85%, 21%);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Event Handling </h1>
+
+  <input type="text" id="myInput" placeholder="Type something...">
+
+  <button id="myBtn">Click Me</button>
+
+  <p id="output"></p>
+
+  <script>
+    let input = document.getElementById("myInput");
+    let button = document.getElementById("myBtn");
+    let output = document.getElementById("output");
+
+    // Show input value while typing
+    input.addEventListener("input", function() {
+      output.textContent = "Typing: " + input.value;
+    });
+
+    // Button click event using addEventListener
+    button.addEventListener("click", function() {
+      alert("You clicked the button!");
+      output.textContent = "Final Value: " + input.value;
+      document.body.style.backgroundColor="pink"
+    });
+  </script>
+
+</body>
+</html>
