@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+     <style>
+        body{
+            background-color: aliceblue;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+    #localStorage {
+        width: 300px;
+        padding: 20px;
+        margin: 20px;
+        background-color: lightblue;
+        border: 2px solid black;
+        text-align: center;
+    }
+
+    #sessionStorage {
+        width: 300px;
+        padding: 20px;
+        margin: 20px;
+        background-color: pink;
+        border: 2px solid black;
+        text-align: center;
+    }
+
+    button {
+        width: 180px;
+        padding: 10px;
+        margin: 8px;
+    }
+</style>
+</head>
+<body>
+    <div id="localStorage">
+    <h2>Local Storage</h2><br>
+    <button onclick="saveLocal()">Save LocalStorage</button>
+    <button onclick="removeLocal()">Remove LocalStorage</button><br><br>
+    </div>
+    <div id="sessionStorage">
+    <h2>Session Strorage</h2><br>
+    <button onclick="saveSession()">Save SessionStorage</button>
+    <button onclick="removeSession()">Remove SessionStorage</button>
+    </div>
+    <script>
+        function saveLocal(){
+        localStorage.setItem("name","Saraswathi");
+        alert("Name Saved in Local Storage");
+        }
+        function removeLocal(){
+        localStorage.removeItem("name");
+        alert("Name removed in Local Storage");
+
+        }
+        function saveSession(){
+        sessionStorage.setItem("name","Kavitha");
+        alert("Name Saved in Session Storage");
+        }
+        function removeSession(){
+        sessionStorage.removeItem("name");
+        alert("Name removed in Session Storage");
+        }
+    </script>
+
+</body>
+</html>
